@@ -1,0 +1,5 @@
+1)¿Qué significa el contador de referencias (link count) de un directorio?, 
+¿cómo cambia el número de entradas en el directorio?
+    R// El contador de referencia es la guía por directorios de un archivo lo que nos especifica la dirección en que dicho
+    archivo se encuentra, mostrandonos carpeta por carpeta como llegar a la unicación de destino.
+    Para cambiar el número de entradas simplemente se debe cambiar la carpeta desde la que es llamada el archivo.
