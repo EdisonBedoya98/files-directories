@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <sys/types.h>
 #include <sys/stat.h>
+
 #include <unistd.h>
 
 int main(int argc, char *argv[])
@@ -13,8 +14,7 @@ int main(int argc, char *argv[])
     struct stat st;
     printf("File: %s\n", argv[1]);
     stat(argv[1], &st);
-    printf("File size: %d bytes\n", st.st_size);
-      if(stat(argv[1],&st) < 0)    
+    if(stat(argv[1],&st) < 0)        
         return 1;
  
     printf("Information for %s\n",argv[1]);
@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
     printf( (st.st_mode & S_IWUSR) ? "w" : "-");
     printf( (st.st_mode & S_IXUSR) ? "x" : "-");
     printf( (st.st_mode & S_IRGRP) ? "r" : "-");
-    printf( (st.st_mode & S_IWGRP) ? "w" : "-");
+    printf( (st.st_mode & S_IWGRP) ? "w" : "-");-
     printf( (st.st_mode & S_IXGRP) ? "x" : "-");
     printf( (st.st_mode & S_IROTH) ? "r" : "-");
     printf( (st.st_mode & S_IWOTH) ? "w" : "-");
